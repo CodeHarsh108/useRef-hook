@@ -1,16 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
+import useCounter from './useCounter';
 
 
 
 function Appl() {
-  const [counter, setCounter] = useState(0);
-  const increment = () => {
-    setCounter(counter + 1);
-  }
-  const decrement = () => {
-    setCounter(counter - 1);
-  }
+  const {counter, increment, decrement} = useCounter();
 
   return (
     <div>
